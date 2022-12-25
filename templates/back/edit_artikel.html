@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-3">
+        <div class="card col-md-6">
+            <div class="card-body">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                      <label for="nama" class="form-label">Nama</label>
+                        <input type="text" name="nama" value="{{ a.nama }}" id="" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="deskripsi" class="form-label">Deskripsi</label>
+                        <textarea class="form-control" name="deskripsi" value="" rows="3">{{ a.deskripsi }}</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tahun_lahir" class="form-label"> Tahun Lahir</label>
+                          <input type="number" name="tahun_lahir" value="{{ a.tahun_lahir }}" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                        <label for="tahun_wafat" class="form-label">Tahun Wafat</label>
+                          <input type="number" name="tahun_wafat" value="{{ a.tahun_wafat }}" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                        <label for="tahun_kenaikan" class="form-label">Tahun Kenaikan</label>
+                          <input type="number" name="tahun_jabatan" value="{{ a.tahun_kenaikan }}" class="form-control">
+                      </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>        
+        </div>
+    </div>
+{% endblock content %}

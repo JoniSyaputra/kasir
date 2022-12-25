@@ -1,0 +1,81 @@
+{% extends 'front/base.html' %}
+{% load static %}
+{% block content %}
+
+
+  <!-- End Navbar -->
+  <!-- -------- START HEADER 7 w/ text and video ------- -->
+  <header class="bg-gradient-dark">
+    <div class="page-header min-vh-75" style="background-image: url('{% static 'front/img/bg9.jpg' %});">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mx-auto my-auto">
+            <h1 class="text-white">Hallo Semuanya!!!</h1>
+            <p class="lead mb-4 text-white opacity-8">Sedikit Tentang Saya</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- -------- END HEADER 7 w/ text and video ------- -->
+    <div class="section">
+           <div class="container">
+               <h2 class="section-title">Introduct</h2>
+               <div class="row">
+                   <div class="col-md-6">
+                       <p>
+                           Perkenalkan Saya Joni Syaputra , saya Lahir di Kab.Berau pada tahun 2002</p> Sekarang Saya Berkuliah Di Universitas Muhammadiyah Kalimantan TImur Samarinda</p>
+                   </div>
+                     <div class="col-md-6">
+                       <p>Alasan Saya menbuat website ini adalah untuk mengenang jasa para pahlawan,dan juga menjaga jiwa nasionalisme kita serta tetap menghargai para pejuang yang telah membantu kemerdekaan Idonesia.</p>
+                       <p></p>
+                   </div>
+               </div>
+           </div>
+    </div><!-- section -->
+    <div class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">About Me  <small> ()</small></h2>
+            <div class="team-presentation">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card card-user">
+                            <div class="image">
+                                <img src="{%static 'front/img/' %}" widht="100px">
+                            </div>
+                            <div class="content">
+                                <div class="author">
+                                    <a href="#">
+                                    <img class="avatar" src="{%static 'front/img/joni.jpg' %}" alt="..."/>
+                                    <h4 class="title">Joni Sypautra  <br />
+                                        <small>2011102441054</small>
+                                    </h4>
+                                    </a>
+                                </div>
+                                <p class="description text-center">
+                                    <i class="fa fa-map-marker fa-fw text-muted"></i> Abdul Wahab Syahranie, Samarinda <br/>
+                                    <i class="fa fa-building-o fa-fw text-muted"></i> 085162870617<br/>
+                                    <i class="fa fa-envelope-o fa-fw text-muted"></i> jonisyaputra117@gmail.com
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-social btn-facebook btn-simple"><i class="fa fa-facebook-square"></i></a>
+                                <a href="https://www.instagram.com/jonisyptra/" class="btn btn-social btn-instagram btn-simple"><i class="fa fa-instagram"></i></a>
+                                <a href="#" class="btn btn-social btn-google btn-simple"><i class="fa fa-google-plus-square"></i></a>
+
+                            </div>
+                        </div> <!-- end card-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end section meet our team -->
+
+    </section>
+    <!-- END Section with four info areas left & one card right with image and waves -->
+    <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
+
+    {% endblock content %}
+   

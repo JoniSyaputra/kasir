@@ -1,0 +1,53 @@
+{% extends 'front/base.html' %}
+{% load static %}
+{% block content %}
+
+
+  <div class="page-header min-vh-80" style="background-image: url('https://asset.kompas.com/crops/wzABJTOL1AnJwsCdcvzuaP75wiU=/0x0:780x390/750x500/data/photo/2017/11/06/229053423.jpg">
+    <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="text-center">
+            <h1 class="text-white">PahlawanKu</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+        <h2 class="section-title">PahlawanKu!!!</h2>
+        <div class="row">
+          {% for p in list_artikel %}
+             <div class="col-md-4">
+                 <div class="card card-plain">
+                     <div class="image">
+                         <img src="" alt="..." />
+                         <div class="filter filter-white">
+                             <button type="button" class="btn btn-info btn-round btn-fill">
+                                 <i class=""></i> {{p.nama}}
+                             </button>
+                         </div>
+                     </div>
+                     <div class="content">
+                         <p class="category">{{p.tahun_lahir}}</p>
+                         <a class="card-link" href="#">
+                             <h4 class="title">{{p.deskripsi}}</h4>
+                         </a>
+                          <div class="footer">
+                             <div class="author">
+                                 <a class="card-link" href="#">
+                                    <img src=" " alt="..." class="avatar">
+                                    <span> {{p.tahun_wafat}} </span>
+                                 </a>
+                             </div>
+                         </div>
+                     </div>
+                 </div> <!-- end card -->
+             </div>
+             {% endfor %}
+        </div>
+    </div>
+</div><!-- section -->
+  {% endblock content %}

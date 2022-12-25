@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}<br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <div class="header">
+                    <a class="btn btn-primary" href="{% url 'register' %}">+ Tambah User<a/>
+                </div>
+                <div class="body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">email</th>
+                            <th scope="col">Is Staff</th>
+
+        
+                          </tr>
+                        </thead>
+                        <tbody>
+                        {% for l in list_user %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{ l.username }}</td>
+                            <td>{{ l.email }}</td>
+                            <td>{{ l.is_staff }}</td>
+                            <td class="text-right">
+                            <a href="{% url 'register' %}" class="btn btn-info">Edit</a>
+                            <!-- <a href="#" class="btn btn-warning"></a> -->
+                            <a onclick="alert('yakin mau dihapus?')" href="" class="btn btn-danger">Hapus</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>     
+        </div>
+    </div>
+{% endblock content %}

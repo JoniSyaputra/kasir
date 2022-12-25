@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}<br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <div class="header">
+                    <a class="btn btn-primary" href="{% url 'tambah_artikel' %}">+ Tambah Artikel<a/>
+                    <a class="btn btn-primary" href="{% url 'sinkron_artikel' %}">+ Sinkron Artikel<a/>    
+                </div>
+                <div class="body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Deskripsi</th>
+                            <th scope="col">Tahun Lahir</th>
+                            <th scope="col">Tahun Wafat</th>
+                            <th scope="col">Tahun Kenaikan</th>
+                            <th scope="col">Table Action</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                        {% for p in artikel %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{ p }}</td>
+                            <td>{{ p.deskripsi }}</td>
+                            <td>{{ p.tahun_lahir }}</td>
+                            <td>{{ p.tahun_wafat }}</td>
+                            <td>{{ p.tahun_kenaikan }}</td>
+                            <td class="text-right">
+                            <a href="{% url 'edit_artikel' p.id %}" class="btn btn-info">Edit</a>
+                            <a onclick="alert('yakin mau dihapus?')" href="{% url 'delete_artikel' p.id %}" class="btn btn-danger">Hapus</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>     
+        </div>
+    </div>
+{% endblock content %}
